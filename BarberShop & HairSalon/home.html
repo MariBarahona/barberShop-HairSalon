@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>barberia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style2.css">
+</head>
+<body>
+  <h1 class="tituloCentrado">barberShop & HairSalon</h1>
+
+
+<!--narbar-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Informacion</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Nosotros.html">Nosotros</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Tienda</a></li>
+            <li><a class="dropdown-item" href="carrito.html">Carrito</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="usuario.html">Mi Cuenta</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Shop</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!--banner-->
+<img src="assets/img/banner.jpg" style="width: 100%;" alt="">
+
+<h1 class="tituloCentrado">Servicios</h1>
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Corte Clásico
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> $7.000 CLP - 30 min. Corte sencillo y elegante, ideal para mantener tu estilo habitual, tanto para hombres como para mujeres (unisex)</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Degradado Moderno (barbería)
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> $9.000 CLP - 45 min. Corte con técnica de degradado que da un look moderno y definido, exclusivo para estilos de barbería.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Arreglo de Barba
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> $5.000 CLP - 20 min. Arreglo y perfilado de barba, para un look cuidado y elegante.</div>
+    </div>
+  </div>
+  <!-- nuevos -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+        Tintura + Corte (dama/caballero)
+      </button>
+    </h2>
+    <div id="flush-collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> $15.000 CLP - 60 min. Cambio de color acompañado de un corte, ideal para renovar tu estilo de pies a cabeza.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefive">
+         Tratamiento Capilar Nutritivo
+      </button>
+    </h2>
+    <div id="flush-collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">$12.000 CLP - 40 min. Nutre y fortalece tu cabello, dejándolo más suave, brillante y saludable.</div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsesix" aria-expanded="false" aria-controls="flush-collapsesix">
+         Peinado de Fiesta/Evento
+      </button>
+    </h2>
+    <div id="flush-collapsesix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"></div>
+     $20.000 CLP - 1hora y media. Peinado profesional para ocasiones especiales, asegurando un look elegante y duradero.</div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseseven" aria-expanded="false" aria-controls="flush-collapseseven">
+         Alisado Permanente 
+      </button>
+    </h2>
+    <div id="flush-collapseseven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"></div>
+    $35.000 CLP - 2 horas. Tratamiento para alisar el cabello de manera prolongada, dejando un acabado liso y manejable.
+</div>
+  </div>
+
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+  <footer class="bg-dark text-white pt-4 pb-2 mt-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Contacto</h5>
+          <p class="mb-1"><i class="bi bi-geo-alt"></i> Independencia 2086, 2380394 Valparaíso, Chile</p>
+          <p class="mb-1"><i class="bi bi-telephone"></i> +56 9 1234 5678</p>
+          <p class="mb-1"><i class="bi bi-whatsapp"></i> WhatsApp: +56 9 1234 5678</p>
+          <p class="mb-1"><i class="bi bi-envelope"></i> barberShop&HairSalon@barberia.cl</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Horarios</h5>
+          <p class="mb-1">Lunes a Viernes: 10:00 - 20:00</p>
+          <p class="mb-1">Sábado: 10:00 - 18:00</p>
+          <p class="mb-1">Domingo: Cerrado</p>
+          <h5 class="fw-bold mt-3">Links rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="home.html" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="#accordionFlushExample" class="text-white text-decoration-none">Servicios</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Reserva</a></li>
+            <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Síguenos</h5>
+          <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i> Instagram</a><br>
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i> Facebook</a><br>
+          <a href="#" class="text-white"><i class="bi bi-tiktok"></i> TikTok</a>
+        </div>
+      </div>
+      <hr class="bg-secondary">
+      <div class="text-center">
+        <small>© 2025 barberShop & HairSalon | Todos los derechos reservados</small>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Bootstrap JS Bundle con Popper NO TOCAR!!!!!-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

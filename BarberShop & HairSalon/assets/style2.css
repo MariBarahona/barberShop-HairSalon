@@ -1,0 +1,83 @@
+/*fondo del registro(Ga)*/
+body#usuario {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*fondo con degradado + imagen(Ga)*/
+.register-bg {
+  min-height: 100vh;
+  background: linear-gradient(rgba(206, 221, 88, 0.7), rgba(148, 155, 69, 0.7)),
+              url("assets/img/barberia1.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/*tarjeta del formulario(Ga)*/
+.register-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  animation: fadeIn 1s ease;
+}
+
+.register-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #222222; /* negro carbón */
+  margin-bottom: 1.5rem;
+}
+
+/*campos de texto(Ga)*/
+.register-card .form-label {
+  font-weight: bold;
+  color: #222222;
+}
+
+.register-card .form-control, 
+.register-card .form-select {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.7rem;
+  font-size: 1rem;
+}
+
+/*boton(Ga)*/
+.register-card .btn-success {
+  background-color: #2E8B57; /* verde esmeralda */
+  border: none;
+  font-weight: bold;
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.register-card .btn-success:hover {
+  background-color: #DAA520; /* dorado */
+}
+
+/*animación suave(Ga)*/
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+
+/*parte de mari*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.tituloCentrado {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Playfair Display', serif;
+}
+
+

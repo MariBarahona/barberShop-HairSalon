@@ -1,0 +1,147 @@
+<!DOCTYPE html><!--Ga-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Cita</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style2.css">
+</head>
+<body id="usuario">
+
+  <!-- barra de navegación -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">BarberShop & HairSalon</a>
+    </div>
+  </nav>
+
+  <!-- fondo con degradado -->
+  <div class="register-bg d-flex align-items-center justify-content-center">
+    <div class="register-card shadow-lg">
+      <h2 class="text-center mb-4">Reserva tu Cita</h2>
+      <form action="#" method="post">
+
+        <!-- nombre -->
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Escribe tu nombre" required>
+        </div>
+
+        <!-- correo -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Correo Electrónico" required>
+        </div>
+
+        <!-- telefono -->
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+56912345678" required>
+        </div>
+
+        <!-- lugar de atención: local o domicilio -->
+        <div class="mb-3">
+        <label class="form-label">Lugar de Atención</label><br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="lugar" id="local" value="local" required>
+            <label class="form-check-label" for="local">En Local</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="lugar" id="domicilio" value="domicilio">
+            <label class="form-check-label" for="domicilio">A Domicilio</label>
+        </div>
+        </div>
+
+        <!-- nueva sección: Región -->
+        <div class="mb-3">
+        <label for="region" class="form-label">Región</label>
+        <select id="region" name="region" class="form-select" required>
+            <option value="">-- Seleccionar Región --</option>
+            <option value="arica_parinacota">Arica y Parinacota</option>
+            <option value="tarapaca">Tarapacá</option>
+            <option value="antofagasta">Antofagasta</option>
+            <option value="atacama">Atacama</option>
+            <option value="coquimbo">Coquimbo</option>
+            <option value="valparaiso">Valparaíso</option>
+            <option value="metropolitana">Metropolitana</option>
+            <option value="ohiggins">O'Higgins</option>
+            <option value="maule">Maule</option>
+            <option value="biobio">Biobío</option>
+            <option value="araucania">La Araucanía</option>
+            <option value="los_rios">Los Ríos</option>
+            <option value="los_lagos">Los Lagos</option>
+            <option value="aysen">Aysén</option>
+            <option value="magallanes">Magallanes</option>
+        </select>
+        </div>
+
+        <!-- nueva sección: Ciudad -->
+        <div class="mb-3">
+        <label for="ciudad" class="form-label">Ciudad</label>
+        <select id="ciudad" name="ciudad" class="form-select" required>
+            <option value="">-- Seleccionar Ciudad --</option>
+            <!-- Aquí puedes agregar dinámicamente las ciudades según la región -->
+        </select>
+        </div>
+
+        <!-- Contenedor dinámico para local o domicilio -->
+        <div class="mb-3" id="lugarDetalle"></div>
+
+
+
+        <!-- Tipo de establecimiento -->
+        <div class="mb-3">
+        <label class="form-label">Tipo de Establecimiento</label><br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="establecimiento" id="salon" value="salon" required>
+            <label class="form-check-label" for="salon">Salón</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="establecimiento" id="barberia" value="barberia">
+            <label class="form-check-label" for="barberia">Barbería</label>
+        </div>
+        </div>
+
+        <!-- Servicios -->
+        <div class="mb-3">
+        <label for="servicio" class="form-label">Servicio</label>
+        <select id="servicio" name="servicio" class="form-select" required>
+            <option value="">-- Seleccionar --</option>
+            <option value="corte_cabello" data-establecimiento="ambos">Corte de Cabello</option>
+            <option value="barba" data-establecimiento="barberia">Afeitado / Barba</option>
+            <option value="tintura" data-establecimiento="salon">Tintura</option>
+            <option value="peinado" data-establecimiento="salon">Peinado</option>
+            <option value="combo" data-establecimiento="barberia">Corte + Barba</option>
+        </select>
+        </div>
+
+        <!-- fecha -->
+        <div class="mb-3">
+          <label for="fecha" class="form-label">Fecha de la Cita</label>
+          <input type="date" id="fecha" name="fecha" class="form-control" required>
+        </div>
+
+        <!-- hora -->
+        <div class="mb-3">
+          <label for="hora" class="form-label">Hora de la Cita</label>
+          <input type="time" id="hora" name="hora" class="form-control" min="09:00" max="20:00" required>
+          <div class="form-text">Horario disponible: 9:00 AM – 8:00 PM</div>
+        </div>
+
+        <!-- notas -->
+        <div class="mb-3">
+          <label for="notas" class="form-label">Notas adicionales (opcional)</label>
+          <textarea id="notas" name="notas" class="form-control" rows="3" placeholder="Ej: Prefiero atención con Juan, necesito tinte rojo..."></textarea>
+        </div>
+
+        <!-- boton -->
+        <button type="submit" class="btn btn-success w-100">Reservar Cita</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/scripts2.js"></script>
+</body>
+</html><!--Ga-->

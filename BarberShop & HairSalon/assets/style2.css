@@ -78,6 +78,109 @@ body #usuario {
   margin-left: auto;
   margin-right: auto;
   font-family: 'Playfair Display', serif;
+
+
+
+  
+}
+.ColorNegro {
+  color: #222222;
+  
 }
 
+.bordeCnegro{
 
+  border-color: #222;
+}
+
+/* Navbar personalizada */
+.navbar-dark-gold {
+  /* Igual que footer (bg-dark de Bootstrap) */
+  background: #212529 !important;
+}
+.navbar-dark-gold .navbar-brand,
+.navbar-dark-gold .nav-link,
+.navbar-dark-gold .dropdown-item,
+.navbar-dark-gold .btn-outline-search {
+  color: #d4af37 !important; /* dorado */
+}
+.navbar-dark-gold .nav-link.active,
+.navbar-dark-gold .nav-link:focus,
+.navbar-dark-gold .nav-link:hover {
+  color: #f2d675 !important;
+}
+.navbar-dark-gold .dropdown-menu {
+  background-color: #212529; /* mismo tono que navbar/footer */
+  border: 1px solid #343a40;
+}
+.navbar-dark-gold .dropdown-item:hover {
+  background-color: #2a2e32;
+  color: #f2d675 !important;
+}
+.btn-outline-search {
+  border: 1px solid #d4af37;
+  background: transparent;
+  color: #d4af37;
+}
+.btn-outline-search:hover {
+  background: #d4af37;
+  color: #000 !important;
+}
+
+/* Ajuste de tamaño para imágenes del carrusel */
+#carouselExample .carousel-item img {
+  width: 300%;
+  height: 700px; /* Ajusta la altura según tu preferencia */
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #fff; /* Opcional: color de fondo para las franjas vacías */
+}
+
+/* Tarjetas productos: asegurar altura uniforme y botón al fondo */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.product-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.product-card .card-body .card-text { flex-grow: 1; }
+.product-card .btn {
+  margin-top: auto;
+  align-self: center; /* centra horizontal */
+  min-width: 140px;
+}
+.product-card img { aspect-ratio: 4/3; object-fit: cover; }
+
+
+.mapa {
+  width: 100%;
+  height: 450px;
+  border: 2px solid
+}
+
+/* Headers con líneas decorativas */
+.section-header-lines {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.85rem;
+  border: none; 
+  background: transparent; 
+  padding: 0.85rem 1rem;
+}
+.section-header-lines::before,
+.section-header-lines::after {
+  content: "";
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+@media (max-width: 576px) {
+  .section-header-lines { font-size: 1.4rem; }
+}

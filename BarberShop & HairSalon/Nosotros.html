@@ -10,23 +10,23 @@
 <body>
 
 <!--Inicio de la barra de navegacion-->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255,255,255,0.85); box-shadow: 0 2px 8px rgba(0,0,0,0.15); position: absolute; width: 100%; z-index: 10;">
+<nav class="navbar navbar-expand-lg navbar-dark-gold">
   <div class="container-fluid">
-  <a class="navbar-brand" style="color: #222; font-weight: bold;" href="#">Informacion</a>
+  <a class="navbar-brand fw-bold" href="#">Información</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" style="color: #222; font-weight: 500;" aria-current="page" href="home.html">Inicio</a>
+          <a class="nav-link active fw-medium" aria-current="page" href="home.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  style="color: #222; font-weight: 500;" href="Nosotros.html">Nosotros</a>
+          <a class="nav-link fw-medium" href="Nosotros.html">Nosotros</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" style="color: #222; font-weight: 500;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Desplegable
+          <a class="nav-link dropdown-toggle fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Desplegables
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="Tienda.html">Tienda</a></li>
@@ -36,20 +36,17 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" style="color: #222;" aria-disabled="true"></a>
+          <a class="nav-link disabled" aria-disabled="true"></a>
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" style="color: #222; border-color: #222;" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-search" type="submit">Buscar</button>
       </form>
       
     </div>
   </div>
 </nav>
-<br>
-<br>
-<br>
 <!--Fin de la barra de navegacion-->
 
 <!--inicio de tarjeta para mostrar la mision y vision de la empresa-->
@@ -73,25 +70,70 @@
     <p class="card-text"><small></small></p>
   </div>
 </div>
-
-<!--fin de tarjeta para mostrar la mision y vision de la empresa-->
-
-<!--inicio tarjeta para agendar hora-->
-
-
-            <div class="card text-center">
-  <div class="card-header">
-    Nuestro Equipo
-  </div>
-  <div class="card-body">
-    <h3 class="card-title">Conoce a nuestro grupo de profesionales</h3>
-    <p class="card-text">Aqui puedes agendar hora con nosotros!</p>
-    <a href="#" class="btn btn-primary">Agendar Hora</a>
-  </div>
-  <div class="card-footer text-body-secondary">
-   
+<div class="card text-center my-5">
+  <div class="card-header section-header-lines">Donde Estamos</div>
   </div>
 </div>
+<!--fin de tarjeta para mostrar la mision y vision de la empresa-->
+<iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.3011735304644!2d-71.61832277347644!3d-33.04853697704354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e0d96e64832f%3A0x2a5aece1efd64db6!2sIndependencia%202086%2C%20Valpara%C3%ADso!5e0!3m2!1ses!2scl!4v1757112880719!5m2!1ses!2scl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!--inicio tarjeta para agendar hora-->
+
+  <div class="card text-center my-5">
+  <div class="card-header section-header-lines">
+      Nuestro Equipo
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Conoce a nuestro grupo de profesionales</h3>
+      <p class="card-text">Aquí puedes agendar hora con nosotros.</p>
+      <div class="d-flex justify-content-center">
+        <a href="tel:+56912345678" class="btn btn-success d-inline-flex align-items-center gap-1">
+          <i class="bi bi-telephone-fill"></i> Llamar
+        </a>
+      </div>
+    </div>    
+</div>
+
+<!--fin tarjeta para agendar hora-->
+
+<!--footer-->
+
+  <footer class="bg-dark text-white pt-4 pb-2 mt-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Contacto</h5>
+          <p class="mb-1"><i class="bi bi-geo-alt"></i> Independencia 2086, 2380394 Valparaíso, Chile</p>
+          <p class="mb-1"><i class="bi bi-telephone"></i> +56 9 1234 5678</p>
+          <p class="mb-1"><i class="bi bi-whatsapp"></i> WhatsApp: +56 9 1234 5678</p>
+          <p class="mb-1"><i class="bi bi-envelope"></i> barberShop&HairSalon@barberia.cl</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Horarios</h5>
+          <p class="mb-1">Lunes a Viernes: 09:00 - 20:00</p>
+          <p class="mb-1">Sábado: 09:00 - 20:00</p>
+          <p class="mb-1">Domingo: Cerrado</p>
+          <h5 class="fw-bold mt-3">Links rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="home.html" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="#accordionFlushExample" class="text-white text-decoration-none">Servicios</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Reserva</a></li>
+            <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Síguenos</h5>
+          <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i> Instagram</a><br>
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i> Facebook</a><br>
+          <a href="#" class="text-white"><i class="bi bi-tiktok"></i> TikTok</a>
+        </div>
+      </div>
+      <hr class="bg-secondary">
+      <div class="text-center">
+        <small>© 2025 barberShop & HairSalon | Todos los derechos reservados</small>
+      </div>
+    </div>
+  </footer>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

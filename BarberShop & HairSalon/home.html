@@ -8,30 +8,35 @@
   <link rel="stylesheet" href="assets/style2.css">
 </head>
 <body>
-  <h1 class="tituloCentrado">BarberShop & HairSalon</h1>
+  
 
+  <h1 class="tituloCentrado section-header-lines main-header-dark">BarberShop & HairSalon</h1>
 
-<!--narbar-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  
+  
+
+<!--Inicio de la barra de navegacion-->
+<nav class="navbar navbar-expand-lg navbar-dark-gold">
   <div class="container-fluid">
-    <a class="navbar-brand" style="color: #222; font-weight: bold;" href="#">Informacion</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" style="color: #222; font-weight: 500;" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link active fw-medium" aria-current="page" href="home.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Nosotros.html">Nosotros</a>
+          <a class="nav-link fw-medium" href="Nosotros.html">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-medium" href="Tienda.html">Tienda</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Menu
+          <a class="nav-link dropdown-toggle fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Desplegables
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="Tienda.html">Tienda</a></li>
             <li><a class="dropdown-item" href="carrito.html">Carrito</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="usuario.html">Mi Cuenta</a></li>
@@ -41,100 +46,135 @@
           <a class="nav-link disabled" aria-disabled="true"></a>
         </li>
       </ul>
-      <form class="d-flex" role="search" style="margin-right: 1rem;">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" style="color: #222; border-color: #222;" type="submit">Search</button>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-search" type="submit">Buscar</button>
       </form>
-      <div class="d-flex gap-2">
-        <a href="iniciarSesion.html" class="btn btn-primary">Iniciar Sesión</a>
-        <a href="usuario.html" class="btn btn-outline-primary">Registrarse</a>
+      <div class="d-flex gap-2" style="margin-left: 0.5rem;">
+        <a href="iniciarSesion.html" id="btnLogin" class="btn btn-gold">Iniciar Sesión</a>
+        <a href="usuario.html" id="btnRegister" class="btn btn-outline-gold">Registrarse</a>
       </div>
     </div>
   </div>
 </nav>
+<!--Fin de la barra de navegacion-->
 
 <!--banner-->
 <img src="assets/img/banner.jpg" style="width: 100%;" alt="">
 
-<h1 class="tituloCentrado">Servicios</h1>
+
+<!--acordeon-->
+<h1 class="tituloCentrado section-header-lines italic-header">Servicios</h1>
 <div class="accordion accordion-flush" id="accordionFlushExample">
+  <!-- acordeon 1 -->
   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        Corte Clásico
-      </button>
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Corte Clásico</button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> $7.000 CLP - 30 min. Corte sencillo y elegante, ideal para mantener tu estilo habitual, tanto para hombres como para mujeres (unisex)</div>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        7.000 CLP - 30 min. Corte sencillo y elegante, ideal para mantener tu estilo habitual, tanto para hombres como para mujeres (unisex).
+        <img src="assets/img/corte_clasico.png" alt="Corte clásico" class="acordeon-img-servicio">
+        <div class="d-flex justify-content-end mt-2"><a href="#" class="btn btn-gold">Agendar hora</a></div>
+      </div>
     </div>
   </div>
+  <!-- acordeon 2 -->
   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Degradado Moderno (barbería)
-      </button>
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Degradado Moderno (barbería)</button>
     </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> $9.000 CLP - 45 min. Corte con técnica de degradado que da un look moderno y definido, exclusivo para estilos de barbería.</div>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        $9.000 CLP - 45 min. Corte con técnica de degradado que da un look moderno y definido, exclusivo para estilos de barbería.
+        <img src="assets/img/Degradado_moderno.jpg" alt="Degradado moderno" class="acordeon-img-servicio">
+        <div class="d-flex justify-content-end mt-2"><a href="#" class="btn btn-gold">Agendar hora</a></div>
+      </div>
     </div>
   </div>
+  <!-- acordeon 3 -->
   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        Arreglo de Barba
-      </button>
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Arreglo de Barba</button>
     </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> $5.000 CLP - 20 min. Arreglo y perfilado de barba, para un look cuidado y elegante.</div>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        $5.000 CLP - 20 min. Arreglo y perfilado de barba, para un look cuidado y elegante.
+        <img src="assets/img/arreglo_barba.jpg" alt="Arreglo de barba" class="acordeon-img-servicio">
+        <div class="d-flex justify-content-end mt-2"><a href="#" class="btn btn-gold">Agendar hora</a></div>
+      </div>
     </div>
   </div>
-  <!-- nuevos -->
+  <!-- acordeon 4 -->
   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
-        Tintura + Corte (dama/caballero)
-      </button>
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">Tintura + Corte (dama/caballero)</button>
     </h2>
-    <div id="flush-collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> $15.000 CLP - 60 min. Cambio de color acompañado de un corte, ideal para renovar tu estilo de pies a cabeza.</div>
+    <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        $15.000 CLP - 60 min. Cambio de color acompañado de un corte, ideal para renovar tu estilo de pies a cabeza.
+        <img src="assets/img/corte_mas_tintura.webp" alt="Corte más tintura" class="acordeon-img-servicio">
+        <div class="d-flex justify-content-end mt-2"><a href="#" class="btn btn-gold">Agendar hora</a></div>
+      </div>
     </div>
   </div>
+  <!-- acordeon 5 -->
   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefive">
-         Tratamiento Capilar Nutritivo
-      </button>
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefive">Tratamiento Capilar Nutritivo</button>
     </h2>
-    <div id="flush-collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">$12.000 CLP - 40 min. Nutre y fortalece tu cabello, dejándolo más suave, brillante y saludable.</div>
+    <div id="flush-collapsefive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        $12.000 CLP - 40 min. Nutre y fortalece tu cabello, dejándolo más suave, brillante y saludable.
+        <img src="assets/img/tratamientos-capilares.png" alt="Tratamiento Capilar Nutritivo" class="acordeon-img-servicio">
+        <div class="d-flex justify-content-end mt-2"><a href="#" class="btn btn-gold">Agendar hora</a></div>
+      </div>
     </div>
   </div>
-   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsesix" aria-expanded="false" aria-controls="flush-collapsesix">
-         Peinado de Fiesta/Evento
-      </button>
+  <!-- acordeon 6 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsesix" aria-expanded="false" aria-controls="flush-collapsesix">Peinado de Fiesta/Evento</button>
     </h2>
-    <div id="flush-collapsesix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"></div>
-     $20.000 CLP - 1hora y media. Peinado profesional para ocasiones especiales, asegurando un look elegante y duradero.</div>
+    <div id="flush-collapsesix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        $20.000 CLP - 1 hora y 30 min. Peinado profesional para ocasiones especiales, asegurando un look elegante y duradero.
+        <img src="assets/img/peinado_fiesta.png" alt="Peinado de fiesta" class="acordeon-img-servicio">
+        <div class="d-flex justify-content-end mt-2"><a href="#" class="btn btn-gold">Agendar hora</a></div>
+      </div>
+    </div>
   </div>
-   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseseven" aria-expanded="false" aria-controls="flush-collapseseven">
-         Alisado Permanente 
-      </button>
+  <!-- acordeon 7 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSeven">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseseven" aria-expanded="false" aria-controls="flush-collapseseven">Alisado Permanente</button>
     </h2>
-    <div id="flush-collapseseven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"></div>
-    $35.000 CLP - 2 horas. Tratamiento para alisar el cabello de manera prolongada, dejando un acabado liso y manejable.
-</div>
+    <div id="flush-collapseseven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        $35.000 CLP - 2 horas. Tratamiento para alisar el cabello de manera prolongada, dejando un acabado liso y manejable.
+        <img src="assets/img/alisado_permanente.jpg" alt="Alisado Permanente" class="acordeon-img-servicio">
+        <div class="d-flex justify-content-end mt-2"><a href="#" class="btn btn-gold">Agendar hora</a></div>
+      </div>
+    </div>
+  </div>
+  <!-- acordeon 8 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingEight">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseseight" aria-expanded="false" aria-controls="flush-collapseseight">Corte Deseado + Domicilio (coste adicional)</button>
+    </h2>
+    <div id="flush-collapseseight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Elige tu estilo + coste de envío según zona: Valparaíso $2.000, Viña del Mar $3.000, Quilpué $4.000, Villa Alemana $5.000.
+        <img src="assets/img/corte_domicilio.jpg" alt="Corte a Domicilio" class="acordeon-img-servicio">
+        <div class="d-flex justify-content-end mt-2"><a href="#" class="btn btn-gold">Agendar hora</a></div>
+      </div>
+    </div>
   </div>
   
 </div>
+<!-- fin acordeon -->
 
-
-
+<!--inicio pie de pagina-->
 </footer>
   <footer class="bg-dark text-white pt-4 pb-2 mt-5">
     <div class="container">

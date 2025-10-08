@@ -1,0 +1,268 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Solo la flecha de los botones del carrusel en negro, sin fondo extra */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(1) brightness(0.3);
+  background-color: transparent !important;
+  border-radius: 0;
+}
+
+/* Solo letra cursiva para encabezados */
+.italic-header {
+  font-style: italic;
+}
+
+/* Encabezado principal con fondo igual al navbar y texto blanco */
+.main-header-dark {
+  background: #212529 !important;
+  color: #fff;
+  padding: 1.2rem 0;
+  margin-bottom: 0;
+  text-align: center;
+  border-radius: 0;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+/* Separación vertical entre barra de búsqueda y botones en navbar colapsado */
+@media (max-width: 991.98px) {
+  .navbar .navbar-collapse .d-flex.gap-2 {
+    margin-top: 0.75rem !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Hamburguesa dorada para el navbar */
+.navbar-dark-gold .navbar-toggler {
+  border-color: #d4af37;
+}
+.navbar-dark-gold .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(212,175,55,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Botón transparente con borde y texto dorado */
+.btn-outline-gold {
+  background: transparent !important;
+  color: #d4af37 !important;
+  border: 2px solid #d4af37 !important;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-outline-gold:hover {
+  background: #d4af37 !important;
+  color: #222222 !important;
+  border-color: #d4af37 !important;
+}
+
+/* Botones personalizados dorado y negro para navbar */
+.btn-gold {
+  background-color: #d4af37 !important;
+  color: #222222 !important;
+  border: none !important;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-gold:hover {
+  background-color: #bfa133 !important;
+  color: #fff !important;
+}
+
+.btn-outline-black {
+  background: transparent;
+  color: #222222;
+  border: 2px solid #222222;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-outline-black:hover {
+  background: #222222;
+  color: #fff;
+}
+
+/* Botón search */
+.btn-outline-search {
+  border: 1px solid #d4af37 !important;
+  background: transparent !important;
+  color: #d4af37 !important;
+}
+.btn-outline-search:hover {
+  background: #d4af37 !important;
+  color: #000 !important;
+  border-color: #d4af37 !important;
+}
+
+/* Tarjetas productos: asegurar altura uniforme y botón al fondo */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.product-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.product-card .card-body .card-text { 
+  flex-grow: 1; 
+}
+.product-card .btn {
+  margin-top: auto;
+  align-self: center;
+  min-width: 140px;
+}
+.product-card img { 
+  aspect-ratio: 4/3; 
+  object-fit: cover; 
+}
+
+/* Mapas */
+.mapa {
+  width: 100%;
+  height: 450px;
+  border: 2px solid;
+}
+
+/* Headers con líneas decorativas */
+.section-header-lines {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.85rem;
+  border: none; 
+  background: transparent; 
+  padding: 0.85rem 1rem;
+}
+.section-header-lines::before,
+.section-header-lines::after {
+  content: "";
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+@media (max-width: 576px) {
+  .section-header-lines { 
+    font-size: 1.4rem; 
+  }
+}
+
+/* Imagen dentro del acordeón de servicios */
+.acordeon-img-servicio {
+  width: 50%;
+  max-width: 320px;
+  display: block;
+  margin: 0.75rem auto 0;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Título centrado */
+.tituloCentrado {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Playfair Display', serif;
+}
+
+.ColorNegro {
+  color: #222222;
+}
+
+.bordeCnegro{
+  border-color: #222;
+}
+
+/* Navbar personalizada */
+.navbar-dark-gold {
+  background: #212529 !important;
+}
+.navbar-dark-gold .navbar-brand,
+.navbar-dark-gold .nav-link,
+.navbar-dark-gold .dropdown-item {
+  color: #d4af37 !important;
+}
+.navbar-dark-gold .nav-link.active,
+.navbar-dark-gold .nav-link:focus,
+.navbar-dark-gold .nav-link:hover {
+  color: #f2d675 !important;
+}
+.navbar-dark-gold .dropdown-menu {
+  background-color: #212529;
+  border: 1px solid #343a40;
+}
+.navbar-dark-gold .dropdown-item:hover {
+  background-color: #2a2e32;
+  color: #f2d675 !important;
+}
+
+/* Estilos para el registro */
+body #usuario {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Fondo con degradado + imagen */
+.register-bg {
+  min-height: 100vh;
+  background: linear-gradient(rgba(206, 221, 88, 0.7), rgba(148, 155, 69, 0.7));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Tarjeta del formulario */
+.register-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  animation: fadeIn 1s ease;
+}
+
+.register-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #222222;
+  margin-bottom: 1.5rem;
+}
+
+/* Campos de texto */
+.register-card .form-label {
+  font-weight: bold;
+  color: #222222;
+}
+
+.register-card .form-control, 
+.register-card .form-select {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.7rem;
+  font-size: 1rem;
+}
+
+/* Botón */
+.register-card .btn-success {
+  background-color: #2E8B57;
+  border: none;
+  font-weight: bold;
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.register-card .btn-success:hover {
+  background-color: #DAA520;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}

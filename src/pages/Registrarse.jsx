@@ -21,44 +21,37 @@ function Registrarse() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validación nombre
     if (!formData.nombre.trim()) {
       alert('Ingresa tu nombre completo');
       return;
     }
 
-    // Validación email simple
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       alert('Ingresa un email válido');
       return;
     }
 
-    // Validación contraseña mínima
     if (formData.password.length < 6) {
       alert('La contraseña debe tener al menos 6 caracteres');
       return;
     }
 
-    // Validar que las contraseñas coincidan
     if (formData.password !== formData.confirmarPassword) {
       alert('Las contraseñas no coinciden');
       return;
     }
 
-    // Validar tipo de trabajador si es trabajador
     if (formData.rol === 'Trabajador' && !formData.tipoTrabajador) {
       alert('Selecciona un tipo de trabajador');
       return;
     }
 
-    // Guardar en localStorage
     localStorage.setItem('usuario', JSON.stringify(formData));
 
     alert('Registro exitoso');
     console.log('Registro guardado:', formData);
 
-    // Limpiar formulario
     setFormData({
       nombre: '',
       email: '',
@@ -77,10 +70,12 @@ function Registrarse() {
             <Card.Body>
               <Card.Title className="text-center mb-4">Crear Cuenta</Card.Title>
               <Form onSubmit={handleSubmit}>
+                {/* Nombre */}
                 <Form.Group className="mb-3">
-                  <Form.Label>Nombre completo</Form.Label>
+                  <Form.Label htmlFor="nombre">Nombre completo</Form.Label>
                   <Form.Control
                     type="text"
+                    id="nombre"
                     name="nombre"
                     value={formData.nombre}
                     onChange={handleChange}
@@ -88,10 +83,12 @@ function Registrarse() {
                   />
                 </Form.Group>
 
+                {/* Email */}
                 <Form.Group className="mb-3">
-                  <Form.Label>Email</Form.Label>
+                  <Form.Label htmlFor="email">Email</Form.Label>
                   <Form.Control
                     type="email"
+                    id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -99,10 +96,12 @@ function Registrarse() {
                   />
                 </Form.Group>
 
+                {/* Contraseña */}
                 <Form.Group className="mb-3">
-                  <Form.Label>Contraseña</Form.Label>
+                  <Form.Label htmlFor="password">Contraseña</Form.Label>
                   <Form.Control
                     type="password"
+                    id="password"
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
@@ -110,10 +109,12 @@ function Registrarse() {
                   />
                 </Form.Group>
 
+                {/* Confirmar Contraseña */}
                 <Form.Group className="mb-3">
-                  <Form.Label>Confirmar Contraseña</Form.Label>
+                  <Form.Label htmlFor="confirmarPassword">Confirmar Contraseña</Form.Label>
                   <Form.Control
                     type="password"
+                    id="confirmarPassword"
                     name="confirmarPassword"
                     value={formData.confirmarPassword}
                     onChange={handleChange}
@@ -121,18 +122,26 @@ function Registrarse() {
                   />
                 </Form.Group>
 
+                {/* Tipo de cuenta */}
                 <Form.Group className="mb-3">
-                  <Form.Label>Tipo de cuenta</Form.Label>
-                  <Form.Select name="rol" value={formData.rol} onChange={handleChange}>
+                  <Form.Label htmlFor="rol">Tipo de cuenta</Form.Label>
+                  <Form.Select
+                    id="rol"
+                    name="rol"
+                    value={formData.rol}
+                    onChange={handleChange}
+                  >
                     <option value="Cliente">Cliente</option>
                     <option value="Trabajador">Trabajador</option>
                   </Form.Select>
                 </Form.Group>
 
+                {/* Tipo de trabajador solo si rol = Trabajador */}
                 {formData.rol === 'Trabajador' && (
                   <Form.Group className="mb-3">
-                    <Form.Label>Tipo de trabajador</Form.Label>
+                    <Form.Label htmlFor="tipoTrabajador">Tipo de trabajador</Form.Label>
                     <Form.Select
+                      id="tipoTrabajador"
                       name="tipoTrabajador"
                       value={formData.tipoTrabajador}
                       onChange={handleChange}
